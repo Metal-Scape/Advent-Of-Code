@@ -1,0 +1,19 @@
+count = 0
+
+def FloorCount(x):
+    global count
+    if x == "(":
+        count += 1
+    elif x == ")":
+        count -= 1
+    else:
+        pass
+    
+with open("input.txt",'r') as f:
+    lines = f.readline()
+    for i in lines:
+        FloorCount(i)
+    f.close()
+
+print("Part 1: {0}".format(count))
+
